@@ -63,7 +63,7 @@ class MarioLess(Checks):
         self.spawn("./mario").stdin("").reject()
 
     @check("compiles")
-    def test_reject_negative(self):
+    def test_reject_negative_2(self):
         """rejects a negative height """
         self.spawn("./mario").stdin("-2").reject()
 
