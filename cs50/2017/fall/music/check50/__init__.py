@@ -11,7 +11,8 @@ class Music(Checks):
         try:
             self.require("bday.txt")
         except Exception:
-            raise Error("did you forget to include bday.txt?")
+            err = Error()
+            err.helpers = "Are you sure bday.txt is in the correct folder?"
 
         # Include distribution code
         self.add("helpers.h")
