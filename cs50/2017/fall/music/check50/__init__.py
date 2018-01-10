@@ -11,7 +11,7 @@ class Music(Checks):
         try:
             self.require("bday.txt")
         except Exception:
-            err = Error()
+            err = Error("Cannot locate bday.txt")
             err.helpers = "Are you sure bday.txt is in the correct folder?"
 
         # Include distribution code
