@@ -62,11 +62,6 @@ class MarioLess(Checks):
         """rejects a non-numeric height of "" """
         self.spawn("./mario").stdin("").reject()
 
-    @check("compiles")
-    def test_reject_negative_2(self):
-        """rejects a negative height """
-        self.spawn("./mario").stdin("-2").reject()
-
 def check_pyramid(output, correct):
     if output == correct:
         return

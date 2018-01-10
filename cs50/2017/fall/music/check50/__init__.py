@@ -7,8 +7,11 @@ class Music(Checks):
         """bday.txt and helpers.c exist"""
 
         # Ensure student files exist
-        self.require("bday.txt")
         self.require("helpers.c")
+        try:
+            self.require("bday.txt")
+        except Exception:
+            raise Error("did you forget to include bday.txt?")
 
         # Include distribution code
         self.add("helpers.h")
