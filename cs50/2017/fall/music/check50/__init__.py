@@ -8,11 +8,7 @@ class Music(Checks):
 
         # Ensure student files exist
         self.require("helpers.c")
-        try:
-            self.require("bday.txt")
-        except Exception:
-            err = Error("Cannot locate bday.txt")
-            err.helpers = "Are you sure bday.txt is in the correct folder?"
+        self.require("bday.txt")
 
         # Include distribution code
         self.add("helpers.h")
