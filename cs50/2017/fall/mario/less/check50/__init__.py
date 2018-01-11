@@ -66,14 +66,14 @@ def check_pyramid(output, correct):
     if output == correct:
         return
 
-    raise Error(correct)
+    output = output.split("\n")
+    correct = correct.split("\n")
+
+    raise Error("expected:\n" + correct + "actual:\n" + output)
 
 
 #    err = Error(Mismatch(correct, output))
-#
-#    #moving output and correct to be after Mismatch call
-#    output = output.split("\n")
-#    correct = correct.split("\n")
+
 
     # check if pyramids are the same height and only differ by trailing whitespace
 #    if len(output) == len(correct) and all(ol.rstrip() == cl for ol, cl in zip(output, correct)):
