@@ -69,7 +69,12 @@ def check_pyramid(output, correct):
     output = output.split("\n")
     correct = correct.split("\n")
 
-    raise Error(correct)
+    test = ["expected:"]
+    test = test + correct
+    test.append("actual:")
+    test = test + output
+
+    raise Error(test)
 
 
 #    err = Error(Mismatch(correct, output))
