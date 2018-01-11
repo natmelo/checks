@@ -66,7 +66,7 @@ def check_pyramid(output, correct):
     if output == correct:
         return
 
-    print(output)
+    raise Error(output)
 
 
 #    err = Error(Mismatch(correct, output))
