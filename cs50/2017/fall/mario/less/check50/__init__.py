@@ -66,15 +66,18 @@ def check_pyramid(output, correct):
     if output == correct:
         return
 
-    err = Error(Mismatch(correct, output))
+    print(output)
 
-    #moving output and correct to be after Mismatch call
-    output = output.split("\n")
-    correct = correct.split("\n")
+
+#    err = Error(Mismatch(correct, output))
+#
+#    #moving output and correct to be after Mismatch call
+#    output = output.split("\n")
+#    correct = correct.split("\n")
 
     # check if pyramids are the same height and only differ by trailing whitespace
-    if len(output) == len(correct) and all(ol.rstrip() == cl for ol, cl in zip(output, correct)):
-        err.helpers = "Did you add too much trailing whitespace to the end of your pyramid?"
-    elif len(output) == len(correct) and all(ol[1:] == cl for ol, cl in zip(output, correct)):
-        err.helpers = "Are you printing an additional character at the beginning of each line?"
-    raise err
+#    if len(output) == len(correct) and all(ol.rstrip() == cl for ol, cl in zip(output, correct)):
+#        err.helpers = "Did you add too much trailing whitespace to the end of your pyramid?"
+#    elif len(output) == len(correct) and all(ol[1:] == cl for ol, cl in zip(output, correct)):
+#        err.helpers = "Are you printing an additional character at the beginning of each line?"
+#    raise err
