@@ -37,7 +37,6 @@ class MarioLess(Checks):
         """handles a height of 2 correctly"""
         out = self.spawn("./mario").stdin("2").stdout()
         correct = File("2.txt").read()
-        print(correct)
         check_pyramid(out, correct)
 
     @check("compiles")
