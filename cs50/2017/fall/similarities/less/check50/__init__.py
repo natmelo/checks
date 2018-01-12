@@ -140,6 +140,7 @@ class Similarities(Checks):
         """handles multiple substrings in common"""
         a = "foobar"
         b = "barfoo"
+        self.check_strings("substrings", a, b, {"f", "o", "b", "a", "r"}, length=1)
         self.check_strings("substrings", a, b, {"fo", "oo", "ba", "ar"}, length=2)
         self.check_strings("substrings", a, b, {"foo", "bar"}, length=3)
 
@@ -148,6 +149,7 @@ class Similarities(Checks):
         """handles substrings when strings are identical"""
         a = "foobar"
         b = "foobar"
+        self.check_strings("substrings", a, b, {"f", "o", "b", "a", "r"}, length=1)
         self.check_strings("substrings", a, b, {"foo", "oob", "oba","bar"}, length=3)
         self.check_strings("substrings", a, b, {"foob", "ooba", "obar"}, length=4)
         self.check_strings("substrings", a, b, {"fooba", "oobar"}, length=5)
