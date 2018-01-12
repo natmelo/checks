@@ -1,5 +1,5 @@
 from check50 import *
-
+import regex as re
 
 class MarioLess(Checks):
 
