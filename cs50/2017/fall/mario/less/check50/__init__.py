@@ -67,10 +67,11 @@ def check_pyramid(output, correct):
         return
 
     output = output.split("\n")
-    correct = correct.split("\n")
+#    correct = correct.split("\n")
+    c2 = re.split('(\W)', correct)
 
     test = ["expected:"]
-    test = test + correct
+    test = test + c2
 #    test.append("actual:")
 #    test = test + output
 
