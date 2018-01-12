@@ -1,5 +1,4 @@
 from check50 import *
-import regex as re
 
 class MarioLess(Checks):
 
@@ -68,14 +67,14 @@ def check_pyramid(output, correct):
 
     output = output.split("\n")
 #    correct = correct.split("\n")
-    c2 = re.split('(\W)', correct)
+    correct = correct.split('(\W)')
+    correct = correct + (correct[0].split('\n'))
+    correct.pop(0)
 
-    test = ["expected:"]
-    test = test + c2
 #    test.append("actual:")
 #    test = test + output
 
-    raise Error(test)
+    raise Error(correct)
 
 
 #    err = Error(Mismatch(correct, output))
