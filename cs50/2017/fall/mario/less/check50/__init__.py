@@ -71,8 +71,8 @@ def check_pyramid(output, correct):
 
     test = ["expected:"]
     test = test + correct
-    test.append("actual:")
-    test = test + output
+#    test.append("actual:")
+#    test = test + output
 
     raise Error(test)
 
