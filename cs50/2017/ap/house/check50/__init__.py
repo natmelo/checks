@@ -1,6 +1,6 @@
 from check50 import *
 import os
-import readDocx
+import docx
 
 class House(Checks):
 
@@ -20,7 +20,9 @@ class House(Checks):
 #            pdfFileObj = open("house.pdf", "rb")
 #            pdfReader = PyPDF2.PdfFileReader(pdfFileObj)
         if os.path.exists("house.doc"):
-            content = readDocx.getText("house.doc")
+            doc = docx.Document("house.doc")
+            for para in doc.paragraphs:
+                content.append(para.text)
         else:
             content = File("house.txt").read()
 
