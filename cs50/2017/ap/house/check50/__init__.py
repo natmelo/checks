@@ -10,6 +10,13 @@ class House(Checks):
                     for extension in ["doc", "docx", "pdf", "txt"]):
             raise Error("File not found")
 
-#    @check("submitted")
-#    def wordcount(self):
-#
+    @check("submitted")
+    def wordcount(self):
+        """ "Should be >= 400 words" """
+        content = ""
+        # get filename
+        content = File("house.txt").read()
+
+        # get wordcount
+        wordcount = len(content.split())
+        raise Error(wordcount)
