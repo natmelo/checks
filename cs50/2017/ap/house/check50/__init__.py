@@ -22,7 +22,7 @@ class House(Checks):
         if os.path.exists("house.doc"):
             doc = docx.Document("house.doc")
             for para in doc.paragraphs:
-                content.append(para.text)
+                content += para.text
         else:
             content = File("house.txt").read()
 
