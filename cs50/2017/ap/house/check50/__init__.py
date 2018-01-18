@@ -23,8 +23,8 @@ class House(Checks):
 #            doc = docx.Document("house.doc")
 #            for para in doc.paragraphs:
 #                content += para.text
-        if os.path.exists("house.txt"):
-            content = File("house.txt").read()
+#        if os.path.exists("house.txt"):
+        content = File("house.txt").read()
 
         # get wordcount
         wordcount = len(content.split())
