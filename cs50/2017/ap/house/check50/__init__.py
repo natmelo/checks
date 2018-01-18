@@ -20,9 +20,10 @@ class House(Checks):
 #            pdfFileObj = open("house.pdf", "rb")
 #            pdfReader = PyPDF2.PdfFileReader(pdfFileObj)
         if os.path.exists("house.doc"):
-            doc = docx.Document("house.doc")
-            for para in doc.paragraphs:
-                content += para.text
+            raise Error("recognizing house.doc")
+#            doc = docx.Document("house.doc")
+#            for para in doc.paragraphs:
+#                content += para.text
         else:
             content = File("house.txt").read()
 
