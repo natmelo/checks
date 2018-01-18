@@ -19,11 +19,11 @@ class House(Checks):
 #        if os.path.exists("house.pdf"):
 #            pdfFileObj = open("house.pdf", "rb")
 #            pdfReader = PyPDF2.PdfFileReader(pdfFileObj)
-        if os.path.exists("house.doc"):
-            doc = docx.Document("house.doc")
-            for para in doc.paragraphs:
-                content += para.text
-        else:
+#        if os.path.exists("house.doc"):
+#            doc = docx.Document("house.doc")
+#            for para in doc.paragraphs:
+#                content += para.text
+        if os.path.exists("house.txt"):
             content = File("house.txt").read()
 
         # get wordcount
