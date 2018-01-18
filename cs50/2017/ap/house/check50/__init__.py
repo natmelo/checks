@@ -1,6 +1,6 @@
 from check50 import *
 import os
-#import docx
+import docx
 
 class House(Checks):
 
